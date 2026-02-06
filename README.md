@@ -6,7 +6,7 @@ It is intended solely for research purposes and hypothesis generation.
 
 ---
 
-## 🎯 Objectives
+## Objectives
 - Import and preprocess gene expression data from GSE16561  
 - Explore transcriptomic patterns associated with stroke  
 - Apply feature selection and dimensionality reduction methods (e.g., PCA, DE analysis)  
@@ -15,7 +15,7 @@ It is intended solely for research purposes and hypothesis generation.
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 stroke_predictions/
 ├── data/ # Raw and processed datasets
 ├── notebooks/ # Exploratory analysis and model experiments
@@ -25,14 +25,14 @@ stroke_predictions/
 
 ---
 
-## 📊 Dataset
+## Dataset
 - **Source:** [GEO Accession GSE16561](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE16561)  
 - **Description:** Microarray gene expression dataset containing samples from stroke patients and controls.  
 - **Current status:** Dataset has been imported; preprocessing, normalization, and feature selection are upcoming.
 
 ---
 
-## 🛠 Current Status
+## Current Status
 - [x] Repository structure created  
 - [x] Dataset imported  
 - [ ] Data cleaning and preprocessing  
@@ -46,7 +46,7 @@ stroke_predictions/
 
 ---
 
-## 🚀 Planned Steps / Roadmap
+## Planned Steps / Roadmap
 1. Explore the dataset (quality control, summary statistics)  
 2. Preprocess and normalize gene expression values  
 3. Feature selection / dimensionality reduction (e.g., PCA, DE analysis)  
@@ -58,12 +58,12 @@ stroke_predictions/
 
 ---
 
-## 📦 Installation (Coming Soon)
+## Installation (Coming Soon)
 Instructions for installing dependencies and running scripts will be added once the pipeline is functional.
 
 ---
 
-## 🧠 Notes
+## Notes
 This project is intended as a **portfolio piece** to demonstrate:
 - Structured project planning  
 - Reproducible data analysis  
