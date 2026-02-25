@@ -33,28 +33,29 @@ stroke_predictions/
 ---
 
 ## Current Status
-- [x] Repository structure created  
-- [x] Dataset imported  
-- [ ] Data cleaning and preprocessing  
-- [ ] Feature engineering / selection  
-- [ ] Model training (initial ML models)  
-- [ ] Model evaluation and metrics  
-- [ ] Refactoring into reusable modules  
-- [ ] Results visualization and documentation  
+- [x] Repository structure created
+- [x] Raw dataset downloaded from GEO (GSE16561)
+- [ ] Data cleaning and preprocessing implemented
+- [ ] Exploratory data analysis (EDA) performed
+- [ ] Feature engineering / selection planned
+- [ ] Initial ML model training pipeline in progress (logistic regression, tree-based models)
+- [ ] Model evaluation setup (cross-validation, metrics)
+- [ ] Refactoring into reusable modules started
+- [ ] Results visualization and documentation in progress
 
 > **Note:** This project is in active development. Code and functionality will be added incrementally.
 
 ---
 
 ## Planned Steps / Roadmap
-1. Explore the dataset (quality control, summary statistics)  
-2. Preprocess and normalize gene expression values  
-3. Feature selection / dimensionality reduction (e.g., PCA, DE analysis)  
-4. Train baseline ML models (Elastic Net regression, Random Forest)  
-5. Evaluate models using appropriate metrics (accuracy, F1-score, ROC-AUC)  
-6. Package models into reusable scripts/modules  
-7. Visualize results (e.g., feature importance, confusion matrices)  
-8. Document the pipeline for reproducibility  
+1. Explore and preprocess the dataset (QC, normalization, batch correction)  
+2. Perform feature selection and dimensionality reduction (PCA, DE analysis)  
+3. Train baseline ML models (Elastic Net, Random Forest) and evaluate (accuracy, F1-score, ROC-AUC, precision/recall)  
+4. Add interpretability (SHAP, permutation importance, feature ranking stability)  
+5. Refactor code into reusable modules and document pipeline for reproducibility  
+6. Visualize results (feature importance, confusion matrices, PCA/UMAP plots)  
+7. Perform pathway and network analysis (GO, KEGG, Jaccard overlap)  
+8. Build an interactive dashboard integrating models, clusters, gene importance, and pathway insights  
 
 ---
 
@@ -64,11 +65,11 @@ Instructions for installing dependencies and running scripts will be added once 
 ---
 
 ## Notes
-This project is intended as a **portfolio piece** to demonstrate:
-- Structured project planning  
-- Reproducible data analysis  
-- Machine learning pipeline development  
+This project demonstrate:
+- Structured project planning and incremental workflow  
+- Reproducible data analysis with clear preprocessing steps 
+- Machine learning pipeline development and evaluation 
 - Code organization and modularity  
-- Experience working with real bioinformatics datasets (GEO microarray data)
+- Experience with real bioinformatics datasets (GEO microarray data)
 
 
