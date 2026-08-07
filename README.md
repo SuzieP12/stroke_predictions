@@ -1,35 +1,32 @@
-# Stroke Transcriptomic Analysis & Predictive Modeling
+# Stroke Transcriptomic Data Analytics Case Study
 
 ## Project Overview
 
-This project analyzes publicly available transcriptomic data from the **Gene Expression Omnibus (GEO)** dataset **GSE16561** to explore molecular patterns associated with ischemic stroke.
+This project explores publicly available transcriptomic data from the **Gene Expression Omnibus (GEO)** dataset **GSE16561** to investigate molecular patterns associated with ischemic stroke.
 
-The goal of this project is to demonstrate a reproducible workflow for processing, analyzing, and visualizing high-dimensional biological data.
+The goal of this project is to demonstrate an end-to-end **biotechnology data analytics workflow**, transforming complex biological datasets into interpretable insights through data processing, statistical analysis, visualization, and machine learning.
 
-The analysis includes:
+This project highlights the ability to:
 
-- Data preprocessing
-- Exploratory data analysis (EDA)
-- Differential expression analysis
-- Dimensionality reduction
-- Baseline machine learning classification
+* Work with real-world biomedical datasets
+* Clean and analyze high-dimensional biological data
+* Apply statistical and machine learning methods
+* Generate meaningful visualizations
+* Communicate scientific findings in an analytical framework
 
-This project is intended for **research exploration and hypothesis generation** and does not represent a clinical diagnostic tool.
+The project is designed as an exploratory research and analytics case study and **does not represent a clinical diagnostic model or medical decision-making tool**.
 
 ---
 
-# Objectives
+# Analytical Questions
 
-The objectives of this project are to:
+This project explores the following questions:
 
-- Import and preprocess publicly available gene expression data
-- Perform quality checks and exploratory analysis
-- Identify genes with differential expression between stroke and control samples
-- Apply dimensionality reduction methods to explore sample clustering
-- Develop a baseline predictive model using machine learning
-- Evaluate model performance using appropriate metrics
-- Create visualizations to communicate biological findings
-- Document the workflow to support reproducibility
+* Can transcriptomic profiles reveal differences between stroke and control samples?
+* Which genes demonstrate the strongest expression differences between groups?
+* Do biological patterns emerge through dimensionality reduction and clustering?
+* Can machine learning models identify differences between sample groups?
+* What insights and limitations should be considered when interpreting genomic data?
 
 ---
 
@@ -39,178 +36,238 @@ The objectives of this project are to:
 
 **Gene Expression Omnibus (GEO)**
 
-**Accession:** GSE16561
+**Dataset Accession:** GSE16561
 
 ## Dataset Description
 
-GSE16561 contains microarray gene expression profiles from human blood samples collected from:
+GSE16561 contains human blood gene expression profiles collected from:
 
-- Stroke patients
-- Healthy controls
+* Patients with ischemic stroke
+* Healthy control individuals
 
 The dataset includes:
 
-- Gene expression measurements
-- Sample metadata
-- Experimental group information
+* Transcriptomic expression measurements
+* Sample metadata
+* Experimental group information
 
-The dataset was selected as a representative example of real-world biomedical data analysis.
-
----
-
-# Technologies & Tools
-
-## Programming
-
-- Python
-- Jupyter Notebook
-
-## Data Analysis
-
-- pandas
-- NumPy
-- SciPy
-- scikit-learn
-
-## Visualization
-
-- Matplotlib
-- Seaborn
-- Plotly
-
-## Bioinformatics
-
-- GEO datasets
-- Gene expression analysis
-- Differential expression analysis
-
-## Reporting
-
-- Power BI dashboard (planned)
+This dataset was selected as a representative example of real-world biotechnology data analysis.
 
 ---
 
-# Project Workflow
+# Analytical Workflow
 
-## 1. Data Acquisition & Preprocessing
+The project follows a reproducible analytics workflow:
 
-### Completed
-
-- Dataset downloaded from GEO
-- Raw expression data imported
-- Sample metadata reviewed
-- Data cleaning performed
-- Expression matrix prepared for analysis
-
-### Upcoming
-
-- Additional normalization checks
-- Batch effect evaluation
-
----
-
-## 2. Exploratory Data Analysis
-
-The exploratory analysis examines:
-
-- Sample distribution
-- Expression patterns
-- Biological variation between groups
-- Potential clustering patterns
-
-### Planned Visualizations
-
-- Expression distribution plots
-- PCA visualization
-- Sample clustering
+```
+Raw Biological Data
+        |
+        v
+Data Acquisition
+        |
+        v
+Data Preprocessing
+        |
+        v
+Exploratory Data Analysis
+        |
+        v
+Differential Expression Analysis
+        |
+        v
+Machine Learning Evaluation
+        |
+        v
+Biological Interpretation & Reporting
+```
 
 ---
 
-## 3. Differential Expression Analysis
+# 1. Data Acquisition
 
-The analysis will identify genes showing differences between:
+### Notebook
 
-- Stroke samples
-- Healthy controls
+`01_data_acquisition.ipynb`
 
-### Planned Outputs
+## Objectives
 
-- Ranked list of differentially expressed genes
-- Volcano plot visualization
-- Heatmaps of significant gene expression patterns
+* Retrieve transcriptomic data from GEO
+* Import expression data and metadata
+* Document dataset characteristics
+* Prepare files for downstream analysis
 
----
+## Outputs
 
-## 4. Predictive Modeling
-
-A baseline machine learning approach will evaluate whether transcriptomic profiles contain enough information to distinguish stroke samples from control samples.
-
-### Planned Models
-
-- Logistic Regression
-- Tree-based models (exploratory)
-
-### Evaluation Metrics
-
-- Accuracy
-- Precision
-- Recall
-- F1-score
-- ROC-AUC
-
-The goal is not clinical prediction, but evaluation of the analytical workflow.
+* Raw GEO dataset
+* Expression matrix
+* Sample metadata
 
 ---
 
-# Dashboard & Data Visualization
+# 2. Data Preprocessing
 
-A final dashboard will summarize:
+### Notebook
 
-## Dataset Overview
+`02_data_preprocessing.ipynb`
 
-- Number of samples
-- Sample groups
-- Gene expression characteristics
+## Objectives
 
-## Biological Findings
+Prepare raw biological data for analysis through:
 
-- Important genes
-- Expression differences
-- Sample clustering
+* Data quality checks
+* Metadata validation
+* Expression matrix formatting
+* Missing value assessment
+* Data preparation for downstream analysis
 
-## Model Performance
+## Outputs
 
-- Classification metrics
-- Model limitations
-- Interpretation of results
+* Clean expression matrix
+* Processed dataset ready for analysis
 
 ---
 
-# Project Structure
+# 3. Exploratory Data Analysis
 
-```text
+### Notebook
+
+`03_exploratory_data_analysis.ipynb`
+
+## Objectives
+
+Understand biological variation and identify patterns within the dataset.
+
+Analysis includes:
+
+* Sample distribution analysis
+* Expression profile visualization
+* Dimensionality reduction
+* Principal Component Analysis (PCA)
+* Sample clustering exploration
+
+## Planned Visualizations
+
+* Expression distribution plots
+* PCA plots
+* Heatmaps
+* Sample clustering visualizations
+
+---
+
+# 4. Differential Expression Analysis
+
+### Notebook
+
+`04_differential_expression_analysis.ipynb`
+
+## Objectives
+
+Identify genes showing differences between:
+
+* Stroke samples
+* Healthy control samples
+
+Analysis includes:
+
+* Statistical comparison between groups
+* Fold-change calculation
+* Significance testing
+* Multiple testing correction
+
+## Outputs
+
+* Differentially expressed gene tables
+* Volcano plots
+* Heatmaps of significant genes
+* Biological interpretation of results
+
+---
+
+# 5. Machine Learning Evaluation
+
+### Notebook
+
+`05_machine_learning_model.ipynb`
+
+## Objectives
+
+Evaluate whether transcriptomic profiles contain information capable of distinguishing stroke samples from control samples.
+
+Initial modeling approach:
+
+* Logistic Regression
+
+Potential future extensions:
+
+* Tree-based models
+* Feature selection approaches
+* Model interpretation techniques
+
+## Evaluation Metrics
+
+Models will be evaluated using:
+
+* Accuracy
+* Precision
+* Recall
+* F1-score
+* ROC-AUC
+
+The objective is not clinical prediction, but evaluation of how machine learning methods perform on high-dimensional biological datasets.
+
+---
+
+# Results & Insights
+
+Final project outputs will include:
+
+## Biological Analysis
+
+* Differentially expressed genes
+* Expression pattern visualization
+* Potential biological pathways of interest
+
+## Data Analytics
+
+* Dataset characterization
+* Sample clustering patterns
+* Statistical findings
+
+## Machine Learning
+
+* Model performance evaluation
+* Limitations and interpretation
+
+---
+
+# Repository Structure
+
+```
 stroke-transcriptomic-analysis/
 
 │
 ├── data/
 │   ├── raw/
-│   └── processed/
+│   │   └── GSE16561_family.soft.gz
+│   │
+│   ├── processed/
+│   │   └── GSE16561_expression_matrix.csv
+│   │
+│   └── metadata/
 │
 ├── notebooks/
-│   ├── 01_data_preprocessing.ipynb
-│   ├── 02_exploratory_analysis.ipynb
-│   ├── 03_differential_expression.ipynb
-│   └── 04_machine_learning_model.ipynb
-│
-├── src/
-│   └── reusable_analysis_functions/
+│   ├── 01_data_acquisition.ipynb
+│   ├── 02_data_preprocessing.ipynb
+│   ├── 03_exploratory_data_analysis.ipynb
+│   ├── 04_differential_expression_analysis.ipynb
+│   └── 05_machine_learning_model.ipynb
 │
 ├── results/
 │   ├── figures/
-│   └── tables/
+│   ├── tables/
+│   └── models/
 │
-├── dashboard/
-│   └── PowerBI_visualizations/
+├── src/
 │
 ├── requirements.txt
 │
@@ -219,57 +276,91 @@ stroke-transcriptomic-analysis/
 
 ---
 
+# Technologies Used
+
+## Programming & Analysis
+
+* Python
+* Jupyter Notebook
+* pandas
+* NumPy
+* SciPy
+* scikit-learn
+
+## Visualization
+
+* Matplotlib
+* Seaborn
+* Plotly
+
+## Biotechnology & Data Analysis
+
+* Gene Expression Omnibus (GEO)
+* Transcriptomic analysis
+* Differential expression analysis
+* High-dimensional biological data analysis
+
+## Analytical Communication
+
+* Scientific reporting
+* Data visualization
+* Reproducible workflows
+
+---
+
 # Current Status
 
 ## Completed
 
-✅ Repository structure created  
-✅ GEO dataset identified and downloaded  
-✅ Initial data import completed  
-✅ Data cleaning and preprocessing implemented  
-✅ Exploratory analysis initiated  
+✅ Repository organization
+✅ GEO dataset identification
+✅ Data acquisition workflow
+✅ Initial preprocessing pipeline
+✅ Exploratory analysis framework
 
 ## In Progress
 
-🔄 Differential expression analysis  
-🔄 Visualization development  
-🔄 Machine learning evaluation  
-🔄 Dashboard creation  
+🔄 Differential expression analysis
+🔄 Biological interpretation
+🔄 Machine learning evaluation
+🔄 Final visualization and reporting
 
 ---
 
 # Future Improvements
 
-Potential future additions:
+Potential future additions include:
 
-- Advanced feature selection methods
-- Additional machine learning models
-- Model interpretation techniques
-- Pathway enrichment analysis
-- Gene network exploration
-- Expanded dashboard functionality
+* Pathway enrichment analysis
+* Gene ontology analysis
+* Additional public datasets for validation
+* Advanced feature selection methods
+* Model interpretation techniques
+* Interactive dashboards for data communication
 
 ---
 
-# Key Skills Demonstrated
+# Skills Demonstrated
 
 This project demonstrates experience with:
 
-- Biomedical data analysis
-- Transcriptomic datasets
-- Python-based data workflows
-- Statistical analysis
-- Machine learning fundamentals
-- Data visualization
-- Reproducible research practices
-- Communication of complex biological data
+* Biotechnology data analytics
+* Biomedical datasets
+* Transcriptomic analysis
+* Statistical reasoning
+* Machine learning fundamentals
+* Data visualization
+* Reproducible research practices
+* Scientific communication
+* Translating complex biological data into actionable insights
 
 ---
 
 # Disclaimer
 
-This project is for educational and research purposes only.
+This project is intended for educational and research purposes only.
 
 The analyses performed are exploratory and should not be interpreted as clinical predictions, diagnostic methods, or medical recommendations.
+
 
 
